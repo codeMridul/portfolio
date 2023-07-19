@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mridul Mishra</title>
@@ -9,20 +10,119 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/74418b6bff.js" crossorigin="anonymous"></script>
+
+</head>
 <body>
-  <div class="navbar">
-    <div>Home</div>
-    <div>Projects</div>
-    <div>Resume</div>
-    <div>About</div> 
-    <div>Contact</div>
+  <!-- navigation bar -->
+  <div class="navbar-container">
+    <div><i class="fa-solid fa-house fa-beat"></i><a href="#home"> Home</a></div>
+    <div><i class="fa-solid fa-file fa-beat"></i><a href="#resume">Resume</a></div>
+    <div><i class="fa-solid fa-briefcase fa-beat"></i><a href="#projects">Projects</a></div>
+    <div><i class="fa-solid fa-user-large fa-beat"></i><a href="#about">About</a></div> 
+    <div><i class="fa-solid fa-address-book fa-beat"></i><a href="#contact">Contact</a></div>
   </div>
-  <div class="namebar">
+
+  <!-- Home Section -->
+  <div class="home-container" id="home">
+    <div >
+      <img id="profile-image" src="./res/profile_photo_circular_nobg.png" alt="Mridul Mishra Photo">
+    </div>
     <div id="salutation">Namaste 🙏, I'm</div>
     <div id="name">Mridul Mishra</div>
     <div id="rest">And this is my portfolio</div>
   </div>
+
+  <!-- Resume Section -->
+  <div class="resume-container" id="resume">
+    <div id="resume-head">My <span>Resume</span></div>
+    <div class="resume-education">
+      <div class="resume-title"><i class="fa-solid fa-school fa-beat"></i>&nbsp; Education</div>
+      <div class="resume-item">
+        <p class="course-date"><i class="fa-solid fa-calendar-days fa-beat"></i>&nbsp;  August 2018 - August 2022</p>
+        <p class="course-name">Bachelor Of Technology : <span>Computer Science & Engineering</span></p>
+        <p class="college-name"><a href="https://www.lpu.in/" target="_blank" style="color: #ffffff;">Lovely Professional University</a>, Punjab, India</p>
+        <p class="score">CGPA: 8.64 / 10</p>
+      </div>
+      <div class="resume-item">
+        <p class="course-date"><i class="fa-solid fa-calendar-days fa-beat"></i>&nbsp;  June 2017</p>
+        <p class="course-name">Senior Secondary Education : <span>PCM</span></p>
+        <p class="college-name">St. Peter's School, Uttar Pradesh, India</p>
+        <p class="score">Marks: 85%</p>
+      </div>
+      <div class="resume-item">
+        <p class="course-date"><i class="fa-solid fa-calendar-days fa-beat"></i>&nbsp;  June 2015</p>
+        <p class="course-name">Secondary Education : <span>PCM</span></p>
+        <p class="college-name">St. Peter's School, Uttar Pradesh, India</p>
+        <p class="score">Marks: 95%</p>
+      </div>
+    </div>
+    <div class="resume-experience">
+      <div class="resume-title"><i class="fa-solid fa-briefcase fa-beat"></i>&nbsp;  Experience</div>
+      <div class="resume-item">
+        <p class="course-date"><i class="fa-solid fa-calendar-days fa-beat"></i>&nbsp;  May 2022 - October 2022 : &nbsp;<span>6 months</span></p>
+        <p class="designation">Software Development Engineer</p>
+        <ul class="resume-experience-details">
+          <li>Worked on the backend with JS tech stack. (Tech: Loopback, ES, express, MySQL)</li>
+          <li>Build an optimized and automated tool from scratch for the client-onboarding workflow process.</li>
+          <li><a href="https://drive.google.com/file/d/15A5vx12X1KP4eMicjLV1QvKaFHmI9E45/view">Employee of the month</a> : November 2021 </li>
+        </ul>
+        <p class="college-name"><a href="https://www.linkedin.com/company/valuefy/" target="_blank" style="color: #ffffff;"><span>Valuefy</span></a> , Mumbai, India</p>
+      </div>
+      <div class="resume-item">
+        <p class="course-date"><i class="fa-solid fa-calendar-days fa-beat"></i>&nbsp;  June 2021 - May 2022 : &nbsp;<span >1 year</span></p>
+        <p class="designation">Software Development Engineer: Intern</p>
+        <ul class="resume-experience-details">
+          <li>Worked on the product Wealthfy-EAM.</li>
+          <li>Coordinated backend deployment using JavaScript frameworks like loopback, express, etc.
+            Optimized the product to improve performance.</li>
+        </ul>
+        <p class="college-name"><a href="https://www.linkedin.com/company/valuefy/" target="_blank" style="color: #ffffff;"><span>Valuefy</span></a> , Mumbai, India</p>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+
+  <!-- Projects Section -->
+  <div class="project-container" id="projects">
+    <div id="project-head">My <span ">Projects</span></div>
+    <div id="project-type">
+      <div>
+        <a href="#project-images">All</a>
+      </div> |
+      <div id="project-web">
+        <a href="#"><i class="fa-solid fa-computer fa-beat"></i> Web Development</a> 
+      </div> |
+      <div id="project-android">
+        <a href="#project-images"><i class="fa-solid fa-mobile-screen fa-beat"></i> Android</a>
+      </div>
+    </div>
+    <div id="project-images">
+      <div>
+        <a href="https://github.com/codeMridul/pedal-plates" target="_blank"><img src="./res/pedal_plates_screenshot.png" alt=""></a>
+        <p class="project-title">Pedal Plates</p>
+      </div>
+      <div>
+        <a href="https://github.com/codeMridul/Book_Hub" target="_blank"><img src="./res/book_hub_screenshot.png" alt=""></a>
+        <p class="project-title">Book hub</p>
+      </div>
+    </div>
+    <div id="project-others">
+      <p>View other projects on: </p>
+      <a href="https://github.com/codeMridul" target="_blank"><img src="./res/github/github_logo.png" alt="github link" height="40px"></a>
+    </div>
+  </div>
+  
+  <div class="about-container" id="about">
+
+  </div>
+  <div class="contact-container" id="contact">
+
+  </div>
   
 </body>
+
 </html>

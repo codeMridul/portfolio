@@ -1,30 +1,59 @@
 body {
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: 'Lumanosimo';
+  margin: 20px;
+  font-family: 'Ubuntu', sans-serif;
   background-color: #222222;
   color: #ffffff;
 }
-.navbar {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  position: fixed;
-  margin: 30px;
-  width: 100vw;
+hr {
+  padding: 0;
+  margin: 0;
+  color: #222222;
 }
-.navbar > * {
-  text-transform: uppercase;
-  padding: 10px;
+span {
+  font-weight: bold;
 }
 
-.namebar {
+/* ----------------Navigation Bar--------------------------- */
+.navbar-container {
+  /* background-color: rgb(253, 20, 20); */
+  display: inline-flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: 20px;
+  box-sizing: border-box;
+}
+.navbar-container > div > a {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.navbar-container > div > a:hover {
+  color: #000000;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ---------------Home Page----------------------------------- */
+.home-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+}
+#profile-image {
+  height: 300px;
+  width: 300px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #cccccc50;
 }
 #salutation {
   font-size: 50px;
@@ -38,6 +67,102 @@ body {
   text-transform: uppercase;
 }
 
+/* -----------------------------Resume Section------------------------ */
+.resume-container {
+  height: 100vh;
+  background-color: #666666;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 6fr;
+  justify-content: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+#resume-head {
+  font-size: 70px;
+  grid-column: span 2;
+  text-align: center;
+  margin: 50px;
+}
+#resume-education, #resume-experience {
+  grid-row: span 2;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.resume-title {
+  font-size: 25px;
+}
+.resume-item {
+  width: 400px;
+  height: 150px;
+  background-color: #222222;
+  border: 4px solid transparent;
+  border-radius: 7px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.course-date {
+  font-size: 0.8rem;
+}
+.resume-experience > .resume-item {
+  height: 247px;
+}
+.resume-experience-details {
+  font-size: 1rem;
+}
+
+
+/* -----------------------------Projects Page------------------------- */
+.project-container {
+  height: 100vh;
+  background-color: #666666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#project-head {
+  font-size: 70px;
+}
+#project-type {
+  display: flex;
+  gap: 20px;
+  width: 100rem;
+  justify-content: center;
+}
+#project-type > div > a {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+#project-images {
+  display: flex;
+  gap: 30px;
+}
+#project-images > div > a >img {
+  height: 300px;
+  width: 300px;
+  object-fit: fit;
+}
+.project-title {
+  text-align: center;
+}
+#project-others {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* ------------------------Media Queries------------------------------- */
+
 @media (max-width: 480px) {
   #name {
     font-size: 30px;
@@ -47,6 +172,18 @@ body {
   }
   #rest {
     font-size: 10px;
+  }
+  #profileimage {
+    height: 200px;
+    width: 200px;
+  }
+  .resume-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .navbar-container {
+    display: none;
   }
 }
 
@@ -59,5 +196,17 @@ body {
   }
   #rest {
     font-size: 13px;
+  }
+  #profileimage {
+    height: 250px;
+    width: 250px;
+  }
+  .resume-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .navbar-container {
+    display: none;
   }
 }
