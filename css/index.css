@@ -1,0 +1,63 @@
+body {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: 'Lumanosimo';
+  background-color: #222222;
+  color: #ffffff;
+}
+.navbar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  position: fixed;
+  margin: 30px;
+  width: 100vw;
+}
+.navbar > * {
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.namebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#salutation {
+  font-size: 50px;
+}
+#name {
+  font-size: 70px;
+  font-weight: bold;
+}
+#rest {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  #name {
+    font-size: 30px;
+  }
+  #salutation {
+    font-size: 20px
+  }
+  #rest {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  #name {
+    font-size: 50px;
+  }
+  #salutation {
+    font-size: 30px
+  }
+  #rest {
+    font-size: 13px;
+  }
+}
