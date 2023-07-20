@@ -5,9 +5,7 @@ body {
   color: #ffffff;
 }
 hr {
-  padding: 0;
-  margin: 0;
-  color: #222222;
+  border: 4px solid transparent;
 }
 span {
   font-weight: bold;
@@ -97,7 +95,7 @@ span {
 }
 .resume-item {
   width: 400px;
-  height: 150px;
+  height: fit-content;
   background-color: #222222;
   border: 4px solid transparent;
   border-radius: 7px;
@@ -106,9 +104,6 @@ span {
 }
 .course-date {
   font-size: 0.8rem;
-}
-.resume-experience > .resume-item {
-  height: 247px;
 }
 .resume-experience-details {
   font-size: 1rem;
@@ -131,7 +126,7 @@ span {
 #project-type {
   display: flex;
   gap: 20px;
-  width: 100rem;
+  width: auto;
   justify-content: center;
 }
 #project-type > div > a {
@@ -164,6 +159,9 @@ span {
 /* ------------------------Media Queries------------------------------- */
 
 @media (max-width: 480px) {
+  .home-container {
+    height: 100vh;
+  }
   #name {
     font-size: 30px;
   }
@@ -173,21 +171,55 @@ span {
   #rest {
     font-size: 10px;
   }
-  #profileimage {
+  #profile-image {
     height: 200px;
     width: 200px;
   }
+
+
   .resume-container{
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: 10px;
+    padding-bottom: 30px;
   }
+  .resume-item {
+    width: 90%;
+  }
+  .resume-title{ 
+    text-align: center;
+  }
+
+
+  .project-container {
+    height: 100%;
+    padding-top: 30px;
+  }
+  #project-images {
+    flex-direction: column;
+  }
+  #project-head, #resume-head {
+    font-size: 30px;
+  } 
+  #project-type{
+    gap: 5px;
+    font-size: 0.6rem;
+    text-align: center;
+  }
+
+
   .navbar-container {
     display: none;
   }
+
 }
 
 @media (min-width: 481px) and (max-width: 1200px) {
+  .home-container {
+    height: 100vh;
+    padding: 30px;
+  }
   #name {
     font-size: 50px;
   }
@@ -197,15 +229,43 @@ span {
   #rest {
     font-size: 13px;
   }
-  #profileimage {
+  #profile-image {
     height: 250px;
     width: 250px;
   }
+
+
   .resume-container{
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: 15px;
+    justify-content: center;
+    
   }
+  .resume-title{ 
+    text-align: center;
+  }
+  #resume-education, #resume-experience {
+    display: flex;
+  }
+  .resume-item {
+    width: 95%;
+  }
+
+
+  #project-head, #resume-head {
+    font-size: 50px;
+  } 
+  .project-container {
+    height: 100%;
+    padding-top: 30px;
+  }
+  #project-images {
+    flex-direction: column;
+  }
+
+  
   .navbar-container {
     display: none;
   }
