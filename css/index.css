@@ -5,7 +5,7 @@ body {
   color: #ffffff;
 }
 hr {
-  border: 4px solid transparent;
+  border: 1px solid transparent;
 }
 span {
   font-weight: bold;
@@ -140,10 +140,11 @@ span {
   display: flex;
   gap: 30px;
 }
-#project-images > div > a >img {
+#project-images > div > a > img {
   height: 300px;
   width: 300px;
   object-fit: fit;
+  border-radius: 7px;
 }
 .project-title {
   text-align: center;
@@ -154,6 +155,56 @@ span {
   flex-direction: column;
 }
 
+/* ------------------------About Me Page---------------------------- */
+.about-container {
+  height: 100vh;
+  background-color: #666666;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+.about-main-content {
+  display: flex; 
+  justify-content: center;
+  gap: 30px;
+}
+#about-head {
+  font-size: 70px;
+  text-align: center;
+  margin: 50px;
+}
+.about-image > img {
+  object-fit: fit;
+  max-width: 600px;
+  height: 480px;
+}
+.about-content {
+  height: fit-content;
+  max-width: 600px;
+}
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.about-buttons > * {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #bac964;
+}
+.about-buttons > *:hover {
+  background-color: #4b5122;
+}
+#content-text {
+  font-size: 20px;
+}
 
 
 /* ------------------------Media Queries------------------------------- */
@@ -195,11 +246,12 @@ span {
   .project-container {
     height: 100%;
     padding-top: 30px;
+    padding-bottom: 30px;
   }
   #project-images {
     flex-direction: column;
   }
-  #project-head, #resume-head {
+  #project-head, #resume-head, #about-head {
     font-size: 30px;
   } 
   #project-type{
@@ -207,6 +259,28 @@ span {
     font-size: 0.6rem;
     text-align: center;
   }
+ 
+
+  .about-container {
+    height: 100%;
+    gap: 20px;
+  }
+  .about-main-content {
+    flex-direction: column;
+  }
+  .about-image > img {
+    max-width: 100%;
+    height: auto;
+  }
+  .about-buttons > * {
+    margin: 10px;
+    padding: 10px;
+    font-size: 0.6rem;
+  }
+  #content-text {
+    font-size: 12px;
+  }
+
 
 
   .navbar-container {
@@ -254,7 +328,7 @@ span {
   }
 
 
-  #project-head, #resume-head {
+  #project-head, #resume-head, #about-head {
     font-size: 50px;
   } 
   .project-container {
@@ -265,6 +339,20 @@ span {
     flex-direction: column;
   }
 
+  .about-container {
+    height: 100%;
+    gap: 20px;
+  }
+  .about-main-content {
+    flex-direction: column;
+  }
+  .about-image > img {
+    max-width: 100%;
+    height: auto;
+  }
+  #content-text {
+    font-size: 16px;
+  }
   
   .navbar-container {
     display: none;
