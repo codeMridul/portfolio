@@ -5,7 +5,9 @@ body {
   color: #ffffff;
 }
 hr {
-  border: 1px solid transparent;
+  padding: 0;
+  margin: 0;
+  border: 2px solid transparent;
 }
 span {
   font-weight: bold;
@@ -207,9 +209,92 @@ span {
 }
 
 
+/* ------------------------Contact Sections---------------------------- */
+.contact-container {
+  height: 100vh;
+  background-color: #666666;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+#contact-head {
+  font-size: 70px;
+  text-align: center;
+  margin: 50px;
+}
+.contact-main-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px;
+}
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact-details-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact-title {
+  font-size: 25px;
+  padding: 20px  20px  20px 0;
+}
+.input-box{
+  background-color: #000000;
+  border-radius: 10px;
+  border: 0px solid transparent;
+  width: 600px;
+  height: 48px;
+  margin-top: 10px;
+  padding: 5px 15px 5px 15px;
+  color: #ffffff;
+  font-size: 16px;
+}
+.contact-submit {
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  color: #ffffff;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 0;
+  background-color: #bac964;
+  width: 300px;
+  font-family: 'Ubuntu';
+}
+.contact-submit:hover {
+  background-color: #4b5122;
+}
+.contact-type {
+  color: #222222;
+  font-weight: bold;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.socials > * {
+  color: #ffffff;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin: 30px;
+  padding: 30px;
+}
+
+
 /* ------------------------Media Queries------------------------------- */
 
 @media (max-width: 480px) {
+  body {
+    margin: 5px;
+  }
+
   .home-container {
     height: 100vh;
   }
@@ -251,7 +336,7 @@ span {
   #project-images {
     flex-direction: column;
   }
-  #project-head, #resume-head, #about-head {
+  #project-head, #resume-head, #about-head, #contact-head {
     font-size: 30px;
   } 
   #project-type{
@@ -280,8 +365,25 @@ span {
   #content-text {
     font-size: 12px;
   }
+  
 
-
+  .contact-container {
+    height: 100%;
+  }
+  .contact-main-container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-title {
+    text-align: center;
+  }
+  .input-box {
+    width: 90%;
+  }
+  .contact-submit {
+    width: 50%;
+  }
 
   .navbar-container {
     display: none;
@@ -315,7 +417,7 @@ span {
     height: 100%;
     padding: 15px;
     justify-content: center;
-    
+    padding-bottom: 30px;
   }
   .resume-title{ 
     text-align: center;
@@ -328,12 +430,13 @@ span {
   }
 
 
-  #project-head, #resume-head, #about-head {
+  #project-head, #resume-head, #about-head, #contact-head {
     font-size: 50px;
   } 
   .project-container {
     height: 100%;
     padding-top: 30px;
+    padding-bottom: 30px;
   }
   #project-images {
     flex-direction: column;
@@ -353,6 +456,29 @@ span {
   #content-text {
     font-size: 16px;
   }
+
+  .contact-container {
+    height: 100%;
+  }
+  .contact-main-container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-title {
+    text-align: center;
+  }
+  .input-box {
+    width: 90%;
+  }
+  .contact-submit {
+    width: 50%;
+  }
+
+  .navbar-container {
+    display: none;
+  }
+
   
   .navbar-container {
     display: none;
