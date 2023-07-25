@@ -336,8 +336,15 @@ footer {
   } 
   #project-type{
     gap: 5px;
-    font-size: 0.6rem;
     text-align: center;
+  }
+  #project-type > div > a {
+    margin: 10px;
+    font-size: 0.6rem;
+  }
+  #project-images > div > a > img {
+    width: 100%;
+    height: auto;
   }
  
 /* ------------------------about-sections----------------- */
