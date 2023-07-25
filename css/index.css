@@ -1,13 +1,18 @@
+:root {
+  --color-primary: #222222;
+  --color-secondary: #666666;
+  --text-color-primary: #ffffff;
+}
 body {
-  margin: 20px;
+  margin: 0px;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #222222;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--text-color-primary);
 }
 hr {
   padding: 0;
   margin: 0;
-  border: 2px solid transparent;
+  border: 0.5px solid transparent;
 }
 span {
   font-weight: bold;
@@ -16,7 +21,7 @@ span {
 /* ----------------Navigation Bar--------------------------- */
 .navbar-container {
   /* background-color: rgb(253, 20, 20); */
-  display: inline-flex;
+  display: none;
   flex-direction: column;
   gap: 40px;
   justify-content: center;
@@ -31,7 +36,7 @@ span {
   padding: 0;
   margin: 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color-primary);
 }
 .navbar-container > div > a:hover {
   color: #000000;
@@ -70,35 +75,35 @@ span {
 /* -----------------------------Resume Section------------------------ */
 .resume-container {
   height: 100vh;
-  background-color: #666666;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 6fr;
-  justify-content: center;
-  padding-left: 25%;
-  padding-right: 25%;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
-  padding-bottom: 30px;
+  padding: 10px;
 }
-#resume-head {
+.resume-main-container {
+  display: flex;
+  gap: 50px;
+}
+#resume-head, #project-head, #about-head, 
+#contact-head {
   font-size: 70px;
-  grid-column: span 2;
-  text-align: center;
   margin: 50px;
+  text-align: center;
 }
-#resume-education, #resume-experience {
-  grid-row: span 2;
-  margin-left: 50px;
+.resume-education, .resume-experience {
   display: flex;
   flex-direction: column;
 }
 .resume-title {
   font-size: 25px;
+  padding: 10px;
 }
 .resume-item {
   width: 400px;
   height: fit-content;
-  background-color: #222222;
+  background-color: var(--color-primary);
   border: 4px solid transparent;
   border-radius: 7px;
   margin-top: 20px;
@@ -115,38 +120,35 @@ span {
 /* -----------------------------Projects Page------------------------- */
 .project-container {
   height: 100vh;
-  background-color: #666666;
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
-}
-#project-head {
-  font-size: 70px;
+  gap: 30px;
+  padding: 10px;
 }
 #project-type {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   width: auto;
   justify-content: center;
+  padding: 10px;
 }
 #project-type > div > a {
   text-transform: uppercase;
-  padding: 0;
   margin: 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color-primary);
 }
 #project-images {
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 #project-images > div > a > img {
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   object-fit: fit;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 .project-title {
   text-align: center;
@@ -160,30 +162,25 @@ span {
 /* ------------------------About Me Page---------------------------- */
 .about-container {
   height: 100vh;
-  background-color: #666666;
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 30px;
+  padding: 10px;
 }
 .about-main-content {
   display: flex; 
   justify-content: center;
-  gap: 30px;
-}
-#about-head {
-  font-size: 70px;
-  text-align: center;
-  margin: 50px;
+  gap: 50px;
 }
 .about-image > img {
   object-fit: fit;
-  max-width: 600px;
+  max-width: 580px;
   height: 480px;
 }
 .about-content {
   height: fit-content;
-  max-width: 600px;
+  max-width: 580px;
 }
 .about-buttons {
   display: flex;
@@ -195,7 +192,7 @@ span {
   padding: 20px;
   text-align: center;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color-primary);
   border-radius: 100px;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -206,28 +203,23 @@ span {
 }
 #content-text {
   font-size: 20px;
+  line-height: 150%;
 }
 
 
 /* ------------------------Contact Sections---------------------------- */
 .contact-container {
   height: 100vh;
-  background-color: #666666;
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 30px;
-}
-#contact-head {
-  font-size: 70px;
-  text-align: center;
-  margin: 50px;
-}
+  gap: 30px;
+  padding: 10px;
+} 
 .contact-main-container {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin: 50px;
 }
 .message-container {
   display: flex;
@@ -249,20 +241,21 @@ span {
   height: 48px;
   margin-top: 10px;
   padding: 5px 15px 5px 15px;
-  color: #ffffff;
+  color: var(--text-color-primary);
   font-size: 16px;
 }
 .contact-submit {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px 20px 10px 20px;
-  color: #ffffff;
+  color: var(--text-color-primary);
   border-radius: 100px;
   font-size: 0.9rem;
   text-transform: uppercase;
   border: 0;
   background-color: #bac964;
   width: 300px;
-  font-family: 'Ubuntu';
+  height: 48px;
+  font-family: 'Ubuntu', sans-serif;
 }
 .contact-submit:hover {
   background-color: #4b5122;
@@ -273,17 +266,18 @@ span {
 }
 .socials {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 30px;
 }
 .socials > * {
-  color: #ffffff;
+  color: var(--text-color-primary);
   text-align: center;
+  padding: 10px 10px 10px 0px;
 }
 
 footer {
   text-align: center;
-  margin: 30px;
+  line-height: 150%;
   padding: 30px;
 }
 
@@ -291,10 +285,6 @@ footer {
 /* ------------------------Media Queries------------------------------- */
 
 @media (max-width: 480px) {
-  body {
-    margin: 5px;
-  }
-
   .home-container {
     height: 100vh;
   }
@@ -312,32 +302,37 @@ footer {
     width: 200px;
   }
 
-
+/* -------------------------------------------resume sections--------------- */
   .resume-container{
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 10px;
-    padding-bottom: 30px;
+    gap: 20px;
+    padding: 50px 5% 50px 5%;
+  }
+  .resume-main-container {
+    flex-direction: column;
   }
   .resume-item {
-    width: 90%;
+    width: auto;
   }
   .resume-title{ 
     text-align: center;
   }
 
-
+/* --------------------------project-sections-------------- */
   .project-container {
     height: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding: 50px 5% 50px 5%;
   }
   #project-images {
     flex-direction: column;
   }
   #project-head, #resume-head, #about-head, #contact-head {
     font-size: 30px;
+    margin: 20px;
   } 
   #project-type{
     gap: 5px;
@@ -345,13 +340,15 @@ footer {
     text-align: center;
   }
  
-
+/* ------------------------about-sections----------------- */
   .about-container {
     height: 100%;
     gap: 20px;
+    padding: 50px 5% 50px 5%;
   }
   .about-main-content {
     flex-direction: column;
+    gap: 20px;
   }
   .about-image > img {
     max-width: 100%;
@@ -360,36 +357,35 @@ footer {
   .about-buttons > * {
     margin: 10px;
     padding: 10px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   #content-text {
-    font-size: 12px;
+    font-size: 16px;
+    text-align: center;
   }
   
-
+/* ------------------------contact section----------------- */
   .contact-container {
     height: 100%;
+    padding: 50px 5% 50px 5%;
+    gap: 20px;
   }
   .contact-main-container {
     flex-direction: column;
-    margin: 0;
-    padding: 0;
   }
   .contact-title {
     text-align: center;
   }
   .input-box {
-    width: 90%;
+    width:auto;
   }
   .contact-submit {
     width: 50%;
   }
 
-  .navbar-container {
-    display: none;
-  }
-
 }
+
+
 
 @media (min-width: 481px) and (max-width: 1200px) {
   .home-container {
@@ -410,77 +406,73 @@ footer {
     width: 250px;
   }
 
-
+  /* -------------------------------resume section------------------ */
   .resume-container{
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 15px;
-    justify-content: center;
-    padding-bottom: 30px;
+    padding: 50px 10% 50px 10%;
+  }
+  .resume-main-container {
+    flex-direction: column;
   }
   .resume-title{ 
     text-align: center;
   }
-  #resume-education, #resume-experience {
-    display: flex;
-  }
   .resume-item {
-    width: 95%;
+    width: auto;
   }
 
-
+  /* ---------------------------projects section--------------------- */
   #project-head, #resume-head, #about-head, #contact-head {
     font-size: 50px;
   } 
   .project-container {
     height: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 50px 10% 50px 10%;
   }
   #project-images {
     flex-direction: column;
   }
 
+
+/* ---------------------------About section-------------------------- */
   .about-container {
     height: 100%;
     gap: 20px;
+    padding: 50px 10% 50px 10%;
   }
   .about-main-content {
     flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
   .about-image > img {
     max-width: 100%;
     height: auto;
   }
   #content-text {
-    font-size: 16px;
+    font-size: 18px;
   }
 
+  /* -----------------------contact section-------------------------- */
   .contact-container {
     height: 100%;
+    padding: 50px 10% 50px 10%;
+    gap: 20px;
+   justify-content: center;
   }
   .contact-main-container {
     flex-direction: column;
-    margin: 0;
-    padding: 0;
   }
   .contact-title {
     text-align: center;
   }
   .input-box {
-    width: 90%;
+    width: auto;
   }
   .contact-submit {
     width: 50%;
   }
 
-  .navbar-container {
-    display: none;
-  }
-
-  
-  .navbar-container {
-    display: none;
-  }
 }
