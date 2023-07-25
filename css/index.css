@@ -15,33 +15,49 @@ hr {
   border: 0.5px solid transparent;
 }
 span {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /* ----------------Navigation Bar--------------------------- */
 .navbar-container {
-  /* background-color: rgb(253, 20, 20); */
-  display: none;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  bottom: 0;
-  margin: 20px;
-  box-sizing: border-box;
-}
-.navbar-container > div > a {
-  text-transform: uppercase;
+  width: 100%;
   padding: 0;
-  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 25px 8px black;  
+  z-index: 1;
+}
+.logo {
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.logo > a {
   text-decoration: none;
   color: var(--text-color-primary);
 }
-.navbar-container > div > a:hover {
-  color: #000000;
-  font-size: 30px;
-  font-weight: bold;
+.navigation-logos {
+  display: flex;
+}
+.navigation-logos > li {
+  margin: 0 20px 0 20px;
+  list-style-type: none;
+}
+.navigation-logos > li > a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+  scroll-behavior: smooth;
+}
+.navigation-logos > li > a:hover {
+  color: var(--color-primary);
+}
+.hamburger {
+  padding: 15px;
+  display: none;
 }
 
 /* ---------------Home Page----------------------------------- */
@@ -302,7 +318,15 @@ footer {
     width: 200px;
   }
 
-/* -------------------------------------------resume sections--------------- */
+  /* -------------------------------Navigation Bar---------------------- */
+  .navigation-logos {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  /* ------------------------------resume sections----------------- */
   .resume-container{
     display: flex;
     flex-direction: column;
@@ -411,6 +435,15 @@ footer {
   #profile-image {
     height: 250px;
     width: 250px;
+  }
+
+
+  /* -------------------------------Navigation Bar---------------------- */
+  .navigation-logos {
+    display: none;
+  }
+  .hamburger {
+    display: block;
   }
 
   /* -------------------------------resume section------------------ */
