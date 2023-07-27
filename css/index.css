@@ -28,7 +28,7 @@ span {
   display: flex;
   justify-content: space-between;
   background-color: var(--color-secondary);
-  box-shadow: 0 0 25px 8px black;  
+  box-shadow: 0 10px 25px 8px black;  
   z-index: 1;
 }
 .logo {
@@ -59,6 +59,30 @@ span {
   padding: 15px;
   display: none;
 }
+/* .dropdown-container {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 48px;
+  display: inline-flex;
+  justify-content: left;
+  background-color: var(--color-secondary);
+  width: 100%;
+  box-shadow: 0 10px 25px 8px black; 
+  display: none;
+}
+.dropdown-options {
+  width: auto;
+  list-style-type: none;
+}
+.dropdown-options > li {
+  margin: 20px;
+  padding: 10px;
+}
+.dropdown-options > li > a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+} */
 
 /* ---------------Home Page----------------------------------- */
 .home-container {
