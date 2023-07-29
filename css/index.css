@@ -59,7 +59,7 @@ span {
   padding: 15px;
   display: none;
 }
-/* .dropdown-container {
+.dropdown-container {
   position: fixed;
   overflow: hidden;
   z-index: 1;
@@ -82,7 +82,7 @@ span {
 .dropdown-options > li > a {
   text-decoration: none;
   color: var(--text-color-primary);
-} */
+}
 
 /* ---------------Home Page----------------------------------- */
 .home-container {
@@ -470,7 +470,9 @@ footer {
   .hamburger {
     display: block;
   }
-
+  .dropdown-container {
+    display: none;
+  }
   /* -------------------------------resume section------------------ */
   .resume-container{
     display: flex;
